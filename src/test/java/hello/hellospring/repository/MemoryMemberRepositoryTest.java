@@ -20,7 +20,7 @@ public class MemoryMemberRepositoryTest {
         Member member = new Member();
         member.setName("spring");
         memoryMemberRepository.save(member);
-        Member result = memoryMemberRepository.findbyId(member.getId()).get();
+        Member result = memoryMemberRepository.findById(member.getId()).get();
         Assertions.assertThat(result).isEqualTo(member);
 
     }
@@ -35,7 +35,7 @@ public class MemoryMemberRepositoryTest {
         member2.setName("spring2");
         memoryMemberRepository.save(member2);
 
-        Member result=memoryMemberRepository.findbyName("spring1").get();
+        Member result=memoryMemberRepository.findByName("spring1").get();
         Assertions.assertThat(result).isEqualTo(member1);
 
 
